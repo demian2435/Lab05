@@ -1,0 +1,11 @@
+1) 	Il livello rappresenta a quale lettere della sequenza è arrivata la mia soluzione parziale
+2)	Una soluzione parziale è la sequenza costruita dalla ricorsione è composta dai vari livelli
+	dell'algoritmo
+3)	Si può riconoscere attraverso il suo livello, ad esempio su TEA arrivati al 3° livello non
+	abbiamo più soluzioni utili da ricercare in quanto terminate le lettere
+4)	Controllando il suo livello
+5)	Una volta attivata la condizione di terminazione possiamo eseguire tutti i filtri richiesti
+6)	Usando la ricorsione a partire da una soluzione parziale già esistente
+7)	Dipende dai dati, una List? una Map?
+8)	Lo stato della ricerca di un ramo è consulabile attraverso il suo livello
+9)	Osservare progetto Laboratorio 05 integrato
