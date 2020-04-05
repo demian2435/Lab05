@@ -8,7 +8,7 @@ public class ComponiAnagrammi {
 
 	public Set<String> anagramma(String parola) {
 		risultato = new HashSet<String>();
-		ricorsiva("", parola.toLowerCase());
+		ricorsiva("", parola);
 		return risultato;
 	}
 

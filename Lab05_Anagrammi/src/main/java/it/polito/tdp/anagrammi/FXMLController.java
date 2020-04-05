@@ -1,8 +1,10 @@
 package it.polito.tdp.anagrammi;
 
 import java.net.URL;
+import java.sql.Time;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.Set;
 
@@ -41,12 +43,18 @@ public class FXMLController {
 	@FXML
 	void doCalcola(ActionEvent event) {
 		doReset(null);
-		Set<String> anagrammi = model.anagrammi(txtParola.getText());
+		double start = System.nanoTime();
+		Map<String, Boolean> anagrammi = model.anagrammiRealiDB(txtParola.getText());
+		double stop = System.nanoTime() - start;
+		System.out.println(stop);
 
-		for (String s : anagrammi) {
-			txtCorretti.appendText(s + "\n");
+		for (String s : anagrammi.keySet()) {
+			if (anagrammi.get(s)) {
+				txtCorretti.appendText(s + "\n");
+			} else {
+				txtErrati.appendText(s + "\n");
+			}
 		}
-
 	}
 
 	@FXML
